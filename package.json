@@ -1,6 +1,6 @@
 {
   "name": "throttle-async",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A throttled function that delays invoking  asynchronous functions.",
   "main": "index.js",
   "scripts": {
