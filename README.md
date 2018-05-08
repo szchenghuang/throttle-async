@@ -20,12 +20,14 @@ Say `d` is a throttled function of `f`, `var d = throttle(f, 1000);`, where f is
 an asynchronous function that returns a promise to be resolved in 400ms since it
 gets called. Below is a depiction of such a sequence of calls to `d`.
 
+```
 seconds elapsed    0         1         2         3
 d called           - d d d - - - - d - - d - d d - - -
                      | x |         |     |   x |
 f called             f   +---f     f     f     +-f
                      |       |     |     |       |
 promise resolved     +-> *   +-> * +-> * +-> *   +-> *
+```
 
 `d` denotes a call to function `d`, `f` denotes a call to function `f`, and `*`
 denotes a promise returned by `f` is resolved. `x` denotes a call to `d` returns
